@@ -1,0 +1,8 @@
+Flask==2.0.1
+requests==2.26.0
+pyrebase4==4.5.0
+sqlalchemy==1.4.25
+pymysql==1.0.2
+pg8000==1.21.3
+pyjwt==2.2.0
+firebase-admin==5.0.3
