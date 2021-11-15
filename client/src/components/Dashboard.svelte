@@ -13,7 +13,7 @@
 
         div {
             height: 10rem;
-            background-color: $color-background-dark;
+            background-color: $color-background-primary;
         }
 
         &__speed {

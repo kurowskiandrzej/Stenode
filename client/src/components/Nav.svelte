@@ -31,7 +31,6 @@
     }
 
 
-
     function openDropdownMenu() {
         isDropDownOpen = true
     }
@@ -50,6 +49,7 @@
     $navbar-bottom-margin: 2rem;
 
     nav {
+        @include non-selectable;
         background-color: $color-background-dark;
         box-shadow: $ui-element-shadow;
         font-size: 2.4rem;
@@ -65,11 +65,78 @@
 
     nav a {
         color: $color-text-light;
-        border: .1rem solid $color-background-dark;
         padding: .5rem;
         margin-right: .5rem;
         cursor: pointer;
+        border: none;
+        position: relative;
+        overflow: hidden;
 
+
+        /* Animation related */
+        &:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: .1rem;
+            background-color: $color-text-light;
+            transition: all .5s;
+        }
+
+        &:after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            right: -100%;
+            width: 100%;
+            height: .1rem;
+            background-color: $color-text-light;
+            transition: all .5s;
+        }
+
+        span:before {
+            content: "";
+            position: absolute;
+            top: -100%;
+            right: 0;
+            width: .1rem;
+            height: 100%;
+            background-color: $color-text-light;
+            transition: all .5s;
+        }
+
+        span:after {
+            content: "";
+            position: absolute;
+            bottom: -100%;
+            left: 0;
+            width: .1rem;
+            height: 100%;
+            background-color: $color-text-light;
+            transition: all .5s;
+        }
+
+        &:hover {
+            &:before {
+                left: 0;
+            }
+
+            &:after {
+                right: 0;
+            }
+
+            span:before {
+                top: 0;
+            }
+
+            span:after {
+                bottom: 0;
+            }
+        }
+
+        /* Special cases */
         &:first-child {
             letter-spacing: .4rem;
             margin-left: $page-horizontal-margin;
@@ -84,14 +151,7 @@
         &:nth-child(2) {
             border: none;
             cursor: default;
-
-            &:hover {
-                border: none;
-            }
-        }
-
-        &:hover {
-            border: .1rem solid $color-text-light;
+            pointer-events: none;
         }
     }
 
@@ -106,7 +166,7 @@
         min-width: 16rem;
         box-shadow: $ui-element-shadow;
         z-index: 1;
-        
+
         padding-left: .2rem;
         padding-right: .2rem;
 
@@ -118,10 +178,10 @@
 </style>
 
 <nav>
-  <a href="/">STENODE</a>
-  <a>|</a>
-  <a href="/flashcards">Type</a>
-  <a>Account
+  <a href="/">STENODE<span></span></a>
+  <a>|<span></span></a>
+  <a href="/typing">Type<span></span></a>
+  <a>Account<span></span>
     <div class="dropdown-content">
       {#if isDropDownOpen}
         <div>test</div>
