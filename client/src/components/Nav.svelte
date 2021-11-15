@@ -6,7 +6,7 @@
 
 
     router('/', () => navigateTo(Typing))
-    router('/typing', () => navigateTo(Typing))
+    router('/Stenode', () => navigateTo(Typing))
 
     router.start()
 
