@@ -1,0 +1,38 @@
+// Colors
+$color-background-secondary: #262626;
+$color-background-primary: #333333;
+
+$color-primary: #02ba7c;
+$color-primary-light: #5aedab;
+$color-primary-dark: #00894f;
+
+$color-secondary: #ffd765;
+$color-secondary-light: #ffff96;
+$color-secondary-dark: #c9a634;
+
+$color-primary-opacity: rgba($color-primary, .3);
+$color-primary-light-opacity: rgba($color-primary-light, .3);
+$color-secondary-light-opacity: rgba($color-secondary-light, .6);
+
+$color-text-dark: #3b3e44;
+$color-text-light: #757578;
+
+$color-alert: #fa2f5b;
+
+// Font
+$font-size-standard: 1.6rem;
+$font-size-small: 1.2rem;
+$font-size-component-title: 2rem;
+$font-size-btn-standard: 1.6rem;
+
+// Shadow
+$ui-element-shadow: 0 .5rem 10px rgba(#333333, .2);
+
+// Corner Radius
+$radius-border-standard: .3rem;
+
+// Animation
+$transition-time-standard: .2s;
+
+// Border
+$border-standard: 0.1rem solid rgba($color-text-dark, .2);

@@ -1,0 +1,57 @@
+button {
+    @include non-selectable;
+
+    font-size: $font-size-btn-standard;
+    color: $color-text-dark;
+    background-color: transparent;
+    display: inline-block;
+    padding: 0.6rem 1.2rem;
+    border: $border-standard;
+    margin: 0 0.3rem 0.3rem 0;
+    border-radius: $radius-border-standard;
+    box-sizing: border-box;
+    text-decoration: none;
+    box-shadow: $ui-element-shadow;
+    text-align: center;
+    transition: all $transition-time-standard;
+    cursor: pointer;
+
+    &:active {
+        transform: translateY(.2rem);
+    }
+
+    &:disabled {
+        $disabled_btn_text_color: #7b7b7b;
+        $disabled_btn_background_color: #ccc;
+
+        color: $disabled_btn_text_color !important;
+        background-color: $disabled_btn_background_color !important;
+        border: 0.1rem solid $disabled_btn_background_color !important;
+    }
+}
+
+.btn {
+    &--positive {
+        &:hover {
+            background-color: $color-primary;
+            color: $color-background-primary;
+            border-color: $color-primary;
+        }
+    }
+
+    &--neutral {
+        &:hover {
+            background-color: $color-secondary;
+            border-color: $color-secondary;
+            color: $color-text-dark;
+        }
+    }
+
+    &--negative {
+        &:hover {
+            background-color: $color-alert;
+            color: $color-background-primary;
+            border-color: $color-alert;
+        }
+    }
+}
