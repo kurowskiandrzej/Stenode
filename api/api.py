@@ -5,6 +5,7 @@ app = Flask(__name__)
 
 
 @app.route("/")
+@app.route("/typing")
 def home():
     return send_from_directory('../client/public', 'index.html')
 

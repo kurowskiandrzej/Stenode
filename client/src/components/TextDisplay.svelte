@@ -1,12 +1,13 @@
 <script lang="ts">
     import {Paragraph} from "../models/Paragraph.ts"
 
-
     const returnKey = '\u23CE'
     export let sourceText: string = ''
 
+    let lineLength = 40
+    let numberOfLines = 10
+
     let paragraph = new Paragraph('So she was considering in her own mind (as well as she could, for the hot day made her feel very sleepy and stupid), whether the pleasure of making a daisy-chain would be worth the trouble of getting up', 30)
-    console.log(paragraph.getLines())
 
     let pulseSuspensionTimer = 3_000
     let isCursorPulsating = true
@@ -16,6 +17,7 @@
     let mistake: string = ''
     let remaining: string = sourceText.substring(1, sourceText.length - 1)
 
+    let userLines: string[] = []
     let userInput: string = ''
 
     function updateInput() {
@@ -23,6 +25,10 @@
         correctlyWritten = userInput
         currentCharacter = sourceText[userInput.length]
         remaining = sourceText.substring(userInput.length + 1, sourceText.length - 1)
+        if (userInput.length % 10 === 0) {
+            userLines.push(userInput.substring(userInput.length - 10, userInput.length - 1))
+            console.log(userLines)
+        }
     }
 
     function reset() {
