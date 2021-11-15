@@ -3,20 +3,26 @@
 </script>
 
 <style type="text/scss">
+    @import "src/sass/main";
+
     .container {
         display: grid;
         grid-template-columns: repeat(3, auto);
+        gap: 2rem;
+        margin-bottom: 1rem;
+
+        div {
+            height: 10rem;
+            background-color: $color-background-dark;
+        }
 
         &__speed {
-            border: #4285f4 solid 2px;
         }
 
         &__time {
-            border: green solid 3px;
         }
 
         &__progress {
-            border: pink dashed 3px;
         }
     }
 </style>

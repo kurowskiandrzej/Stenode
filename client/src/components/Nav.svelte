@@ -5,10 +5,10 @@
     import NavStore from '../stores/NavStore.ts'
 
 
-/*    router('/typing', () => navigateTo(Home))
+    router('/', () => navigateTo(Typing))
     router('/typing', () => navigateTo(Typing))
 
-    router.start()*/
+    router.start()
 
     function navigateTo(page) {
         NavStore.update(data => {
@@ -47,13 +47,10 @@
 <style type="text/scss">
     @import "../sass/main";
 
-    $navbar-bottom-margin: 5rem;
+    $navbar-bottom-margin: 2rem;
 
     nav {
-        @include non-selectable;
-
-        background-color: $color-primary;
-        color: $color-background-primary;
+        background-color: $color-background-dark;
         box-shadow: $ui-element-shadow;
         font-size: 2.4rem;
         display: flex;
@@ -67,8 +64,8 @@
     }
 
     nav a {
-        color: $color-background-primary;
-        border: .2rem solid $color-primary;
+        color: $color-text-light;
+        border: .1rem solid $color-background-dark;
         padding: .5rem;
         margin-right: .5rem;
         cursor: pointer;
@@ -94,7 +91,7 @@
         }
 
         &:hover {
-            border: .2rem solid $color-background-secondary;
+            border: .1rem solid $color-text-light;
         }
     }
 
@@ -121,9 +118,9 @@
 </style>
 
 <nav>
-  <a href="/">ECLECTUS</a>
+  <a href="/">STENODE</a>
   <a>|</a>
-  <a href="/flashcards">Flashcards</a>
+  <a href="/flashcards">Type</a>
   <a>Account
     <div class="dropdown-content">
       {#if isDropDownOpen}
