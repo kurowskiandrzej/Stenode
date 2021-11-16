@@ -24,6 +24,7 @@ class LineManager {
     }
 
     static goToPreviousLine(resetUserInputToPreviousLine: (line: string) => void | null) {
+        if (this.userLines.length < 1) return
         if (this.displayedLines.length !== 0) {
             if (this.currentLineIndex > 0) this.currentLineIndex--
             else this.currentLineIndex = this.displayedLines.length - 1
