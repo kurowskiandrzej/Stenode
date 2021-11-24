@@ -8,11 +8,10 @@
 
     let isInitialized: boolean = false
 
-    let lineLength = 70
     let numberOfLines = 12
 
     let paragraphText = 'I am forced into speech because men of science have refused to follow my advice without knowing why. It is altogether against my will that I tell my reasons for opposing this contemplated invasion of the antarctic-with its vast fossil-hunt and its wholesale boring and melting of the ancient ice-cap-and I am the more reluctant because my warning may be in vain. Doubt of the real facts, as I must reveal them, is inevitable; yet if I suppressed what will seem extravagant and incredible there would be nothing left. The hitherto withheld photographs, both ordinary and aërial, will count in my favour; for they are damnably vivid and graphic. Still, they will be doubted because of the great lengths to which clever fakery can be carried. The ink drawings, of course, will be jeered at as obvious impostures; notwithstanding a strangeness of technique which art experts ought to remark and puzzle over.'
-    let paragraph = new Paragraph(paragraphText, lineLength)
+    let paragraph = new Paragraph(paragraphText)
 
     let userInput: string = ''
 

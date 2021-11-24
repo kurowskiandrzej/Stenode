@@ -49,7 +49,7 @@ class LineManager {
     }
 
     static initialize(paragraph: Paragraph) {
-        paragraph.getLines().forEach(line => {
+        paragraph.getLines(60).forEach(line => {
             this.displayedLines.push(line)
         })
         this.isInitialized = true
